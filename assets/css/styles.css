@@ -406,6 +406,96 @@ body {
     color: white;
 }
 
+/* Icon Styles */
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.icon-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-md {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-lg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-xl {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.icon-2xl {
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.icon-container-sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-container-md {
+    width: 3rem;
+    height: 3rem;
+}
+
+.icon-container-lg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.icon-container-xl {
+    width: 5rem;
+    height: 5rem;
+}
+
+/* Icon Color Variants */
+.icon-primary {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--blue-500);
+}
+
+.icon-success {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: var(--green-500);
+}
+
+.icon-warning {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: var(--yellow-500);
+}
+
+.icon-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.icon-info {
+    background-color: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+}
+
 /* Accessibility */
 .sr-only {
     position: absolute;

@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buisbuild - Your end-to-end partner for systematic business growth. We install proven systems for business structure, marketing, and sales.">
+    <meta name="keywords" content="business growth, systematic business development, Sri Lankan SME, business consultation, digitalization, automation">
+    <meta name="author" content="Buisbuild (Pvt) Ltd">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Buisbuild | End-to-End Partner for Systematic Business Growth">
+    <meta property="og:description" content="Stop running in circles. Start building an asset. We install proven systems for predictable growth and business freedom.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://buisbuild.lk/">
+    
     <title>Buisbuild | End-to-End Partner for Systematic Business Growth</title>
+    
+    <!-- Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-       .brand-gradient {
-            background: linear-gradient(90deg, #00A6ED 0%, #72C144 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-       .cta-button {
-            background: linear-gradient(90deg, #00A6ED 0%, #0082be 100%);
-        }
-       .secondary-cta-button {
-            background-color: #F8FAFC;
-            border: 1px solid #E2E8F0;
-            color: #0F172A;
-        }
-       .secondary-cta-button:hover {
-            background-color: #F1F5F9;
-        }
-    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body class="bg-slate-50 text-slate-800">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-3xl font-bold brand-gradient">Buisbuild</a>
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="methodology.html" class="text-slate-600 hover:text-blue-500">Our Methodology</a>
-                <a href="who-we-help.html" class="text-slate-600 hover:text-blue-500">Who We Help</a>
-                <a href="case-studies.html" class="text-slate-600 hover:text-blue-500">Case Studies</a>
-                <a href="insights.html" class="text-slate-600 hover:text-blue-500">Insights</a>
-                <a href="about.html" class="text-slate-600 hover:text-blue-500">About Us</a>
+    <header class="site-header">
+        <nav class="nav-container">
+            <a href="index.html" class="nav-logo brand-gradient">Buisbuild</a>
+            <div class="nav-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="methodology.html">Our Methodology</a>
+                <a href="who-we-help.html">Who We Help</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="insights.html">Insights</a>
+                <a href="about.html">About Us</a>
             </div>
-            <a href="contact.html" class="hidden md:block cta-button hover:opacity-90 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">Book a Consultation</a>
-            <button id="mobile-menu-button" class="md:hidden">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <a href="contact.html" class="cta-button hidden md:block">Book a Consultation</a>
+            <button id="mobile-menu-button" class="mobile-menu-button" aria-expanded="false" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
-            <a href="methodology.html" class="block text-slate-600 hover:text-blue-500">Our Methodology</a>
-            <a href="who-we-help.html" class="block text-slate-600 hover:text-blue-500">Who We Help</a>
-            <a href="case-studies.html" class="block text-slate-600 hover:text-blue-500">Case Studies</a>
-            <a href="insights.html" class="block text-slate-600 hover:text-blue-500">Insights</a>
-            <a href="about.html" class="block text-slate-600 hover:text-blue-500">About Us</a>
-            <a href="contact.html" class="block mt-4 text-center cta-button hover:opacity-90 text-white font-bold py-2 px-6 rounded-lg shadow-lg">Book a Consultation</a>
+        <div id="mobile-menu" class="mobile-menu hidden">
+            <a href="index.html" class="active">Home</a>
+            <a href="methodology.html">Our Methodology</a>
+            <a href="who-we-help.html">Who We Help</a>
+            <a href="case-studies.html">Case Studies</a>
+            <a href="insights.html">Insights</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="cta-button mt-4 text-center">Book a Consultation</a>
         </div>
     </header>
 
@@ -73,17 +74,29 @@
                 <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-12">You started your business to create freedom, but now you're trapped by the very thing you built.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="text-4xl mb-4">🌪️</div>
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                            </svg>
+                        </div>
                         <h3 class="text-xl font-bold mb-2">Operational Chaos</h3>
                         <p class="text-slate-600">You're constantly firefighting, overwhelmed by daily tasks, and the business can't function without you.</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="text-4xl mb-4">🛑</div>
+                        <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                            </svg>
+                        </div>
                         <h3 class="text-xl font-bold mb-2">Stalled Growth</h3>
                         <p class="text-slate-600">Growth has hit a plateau. What got you here won't get you to the next level, and you're not sure what to do next.</p>
                     </div>
                     <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="text-4xl mb-4">❓</div>
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
                         <h3 class="text-xl font-bold mb-2">Marketing Guesswork</h3>
                         <p class="text-slate-600">You're spending money on marketing but getting inconsistent results and an unpredictable flow of leads.</p>
                     </div>
@@ -213,12 +226,6 @@
         </div>
     </footer>
 
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
