@@ -2,22 +2,6 @@
 
 ## 🚀 Getting Your Website Live
 
-### Option 1: Basic Hosting (Recommended for Start)
-1. **Choose a hosting provider** (SiteGround, Bluehost, or local Sri Lankan providers)
-2. **Upload files** via FTP or hosting panel file manager
-3. **Point your domain** to the hosting account
-4. **Test the website** on your domain
-
-### Option 2: Advanced Hosting
-1. **Use cloud hosting** (AWS, Google Cloud, or DigitalOcean)
-2. **Set up SSL certificate** for HTTPS
-3. **Configure CDN** for better performance
-4. **Enable caching** and compression
-
-## 📧 Contact Form Setup
-
-Your contact form currently shows a demo message. To make it functional:
-
 ### Option 1: Simple Email Forwarding
 ```php
 <?php
