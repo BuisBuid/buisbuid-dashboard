@@ -6,16 +6,61 @@
 function initMobileMenu() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            // Toggle aria-expanded for accessibility
-            const isExpanded = !mobileMenu.classList.contains('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+
+    if (!mobileMenuButton || !mobileMenu) return;
+
+    // Helpers to open/close with animation while keeping the existing "hidden" Tailwind utility
+    const TRANSITION_MS = 260;
+
+    function openMenu() {
+        // make visible, start from closed state
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.remove('mobile-menu-closing');
+        // ensure starting position for animation
+        requestAnimationFrame(() => {
+            mobileMenu.classList.add('mobile-menu-open');
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
         });
+
+        // Attach listeners to support keyboard and outside clicks
+        document.addEventListener('keydown', onKeyDown);
+        document.addEventListener('click', onOutsideClick);
     }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('mobile-menu-open');
+        mobileMenu.classList.add('mobile-menu-closing');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+
+        // wait for CSS transition before hiding completely
+        setTimeout(() => {
+            mobileMenu.classList.remove('mobile-menu-closing');
+            mobileMenu.classList.add('hidden');
+        }, TRANSITION_MS);
+
+        document.removeEventListener('keydown', onKeyDown);
+        document.removeEventListener('click', onOutsideClick);
+        // return focus to toggle button for accessibility
+        mobileMenuButton.focus();
+    }
+
+    function onKeyDown(e) {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    }
+
+    function onOutsideClick(e) {
+        if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+            closeMenu();
+        }
+    }
+
+    mobileMenuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = mobileMenu.classList.contains('mobile-menu-open') && !mobileMenu.classList.contains('hidden');
+        if (isOpen) closeMenu(); else openMenu();
+    });
 }
 
 /**
