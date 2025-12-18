@@ -7,7 +7,7 @@
 <?php
 // contact-handler.php
 if ($_POST) {
-    $to = "contact@buisbuild.lk";
+    $to = "info@consulting4e.com";
     $subject = "New Contact Form Submission";
     $message = "Name: " . $_POST['firstName'] . " " . $_POST['lastName'] . "\n";
     $message .= "Email: " . $_POST['email'] . "\n";

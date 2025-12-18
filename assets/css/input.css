@@ -5,7 +5,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Buisbuild Website Custom Styles */
+/* Consulting 4 E Website Custom Styles */
 
 /* CSS Variables for consistent theming */
 :root {
@@ -250,24 +250,6 @@ body {
     gap: var(--spacing-sm);
 }
 
-/* Mobile menu animated states (JS toggles these classes) */
-.mobile-menu {
-    transition: opacity 0.26s ease, transform 0.26s ease;
-    opacity: 0;
-    transform: translateY(-6px);
-    will-change: opacity, transform;
-}
-
-.mobile-menu.mobile-menu-open {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.mobile-menu.mobile-menu-closing {
-    opacity: 0;
-    transform: translateY(-6px);
-}
-
 .mobile-menu a {
     text-decoration: none;
     color: var(--slate-600);
@@ -278,19 +260,6 @@ body {
 .mobile-menu a:hover,
 .mobile-menu a.active {
     color: var(--primary-blue);
-}
-
-/* Focus-visible helpers for keyboard users */
-.mobile-menu-button:focus-visible,
-.cta-button:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(59,130,246,0.18);
-    border-radius: 0.5rem;
-}
-
-/* Improve CTA contrast on focus */
-.cta-button:focus {
-    transform: translateY(-1px);
 }
 
 @media (min-width: 768px) {

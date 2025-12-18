@@ -2,7 +2,7 @@
 
 ## Production Setup Complete! ✅
 
-Your Buisbuild website now uses a proper Tailwind CSS production setup instead of the CDN.
+Your Consulting 4 E website now uses a proper Tailwind CSS production setup instead of the CDN.
 
 ## How It Works
 

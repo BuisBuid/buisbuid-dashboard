@@ -1,6 +1,6 @@
 # Icon Library Reference
 
-This document provides a reference for the Heroicon icons used throughout the Buisbuild website.
+This document provides a reference for the Heroicon icons used throughout the Consulting 4 E website.
 
 ## Icon Library: Heroicons
 
@@ -214,4 +214,4 @@ We use [Heroicons](https://heroicons.com/) - a beautiful hand-crafted SVG icon s
 
 **Last Updated**: September 2025  
 **Icon Library Version**: Heroicons v2  
-**Maintained By**: Buisbuild Development Team
+**Maintained By**: Consulting 4 E Development Team
