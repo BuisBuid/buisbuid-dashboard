@@ -1,4 +1,4 @@
-// Buisbuild Website JavaScript
+// Consulting 4 E Website JavaScript
 
 /**
  * Mobile Menu Toggle Functionality
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initPerformanceMonitoring();
     
-    console.log('Buisbuild website initialized successfully');
+    console.log('Consulting 4 E website initialized successfully');
 });
 
 /**
