@@ -590,6 +590,14 @@ video {
   }
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.visible{
+  visibility: visible;
+}
+
 .fixed{
   position: fixed;
 }
@@ -604,6 +612,10 @@ video {
 
 .sticky{
   position: sticky;
+}
+
+.inset-0{
+  inset: 0px;
 }
 
 .left-0{
@@ -885,12 +897,6 @@ video {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-x-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -939,6 +945,10 @@ video {
 
 .scroll-smooth{
   scroll-behavior: smooth;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
 }
 
 .rounded-full{
@@ -1021,6 +1031,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-white\/80{
+  background-color: rgb(255 255 255 / 0.8);
+}
+
 .bg-yellow-100{
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
@@ -1035,14 +1049,37 @@ video {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
 .from-blue-500{
   --tw-gradient-from: #3b82f6 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(59 130 246 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-white{
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-slate-50{
+  --tw-gradient-to: rgb(248 250 252 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #f8fafc var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .to-green-500{
   --tw-gradient-to: #22c55e var(--tw-gradient-to-position);
+}
+
+.to-white{
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
+}
+
+.p-10{
+  padding: 2.5rem;
 }
 
 .p-3{
@@ -1296,6 +1333,11 @@ video {
 
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-sm{
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .transition{
@@ -1567,6 +1609,25 @@ body {
   gap: var(--spacing-sm);
 }
 
+/* Mobile menu animated states (JS toggles these classes) */
+
+.mobile-menu {
+  transition: opacity 0.26s ease, transform 0.26s ease;
+  opacity: 0;
+  transform: translateY(-6px);
+  will-change: opacity, transform;
+}
+
+.mobile-menu.mobile-menu-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu.mobile-menu-closing {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
 .mobile-menu a {
   text-decoration: none;
   color: var(--slate-600);
@@ -1577,6 +1638,21 @@ body {
 .mobile-menu a:hover,
 .mobile-menu a.active {
   color: var(--primary-blue);
+}
+
+/* Focus-visible helpers for keyboard users */
+
+.mobile-menu-button:focus-visible,
+.cta-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.18);
+  border-radius: 0.5rem;
+}
+
+/* Improve CTA contrast on focus */
+
+.cta-button:focus {
+  transform: translateY(-1px);
 }
 
 @media (min-width: 768px) {
@@ -2117,6 +2193,11 @@ p {
   .sm\:flex-row{
     flex-direction: row;
   }
+
+  .sm\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -2170,9 +2251,13 @@ p {
     padding: 3rem;
   }
 
-  .md\:py-32{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .md\:p-16{
+    padding: 4rem;
+  }
+
+  .md\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:text-4xl{
@@ -2212,5 +2297,10 @@ p {
 
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
